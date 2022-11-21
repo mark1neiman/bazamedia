@@ -1,10 +1,10 @@
 import React from 'react'
-import 'leftBar.scss'
+import './leftBar.scss'
 
-const leftBar = () => {
+const LeftBar = () => {
     return (
         <div>leftBar</div>
     )
 }
 
-export default leftBar
+export default LeftBar

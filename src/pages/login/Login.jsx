@@ -16,8 +16,8 @@ const Login = () => {
                 <div className="card-left">
 
                     <h1>
-                        BAZA
-                        MEDIA
+                        baza
+                        media
                     </h1>
 
                 </div>
