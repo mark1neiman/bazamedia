@@ -5,20 +5,19 @@ $lg: 960px;
 $xl: 1200px;
 
 .login {
-    padding: 60px;
-    background-color: rgb(193, 190, 255);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
 
     .card {
         display: flex;
         background-color: white;
         width: 50%;
         border-radius: 10px;
-        min-height: 900px;
+        min-height: 600px;
         background-size: cover;
+        background-color: rgb(240, 240, 240);
 
         @media screen and (max-width: $sm) {
             flex-direction: column;
@@ -46,6 +45,7 @@ $xl: 1200px;
                 font-size: 100px;
                 line-height: 100px;
                 text-align: center;
+                text-transform: uppercase;
 
                 @media screen and (max-width: $sm) {
                     font-size: 40px;
@@ -83,6 +83,7 @@ $xl: 1200px;
                     text-align: center;
                     padding: 1px;
 
+
                 }
             }
 
@@ -95,6 +96,7 @@ $xl: 1200px;
                     border: none;
                     border-bottom: 1px solid lightgray;
                     padding: 20px 10px;
+                    background-color: rgb(240, 240, 240);
 
                     @media screen and (max-width: $sm) {
                         text-align: center;
