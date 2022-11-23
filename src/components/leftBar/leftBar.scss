@@ -1,68 +1,175 @@
+@import "../../style.scss";
+
 .leftBar {
+    @include themify($themes) {
+        flex: 1;
+        position: sticky;
+        top: 70px;
+        height: calc(100vh - 70px);
+        overflow: scroll;
+        background-color: rgb(240, 242, 245);
+        overflow: scroll;
 
-    flex: 1;
-    position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
-    overflow: scroll;
-    background-color: white;
-    overflow: scroll;
+        &::-webkit-scrollbar {
+            display: none;
 
-    &::-webkit-scrollbar {
-        display: none;
-
-    }
-
-    .container {
-        padding: 20px;
-
-
-
-        hr {
-            margin: 20px 0px;
-            border: none;
-            height: 0.5px;
-            background-color: lightgray;
         }
 
-        .menu {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .container {
+            padding: 20px;
 
-            span {
-                font-size: 12px;
+            a {
+                font-size: 14px;
+                text-decoration: none;
+                color: black;
+                font-weight: 600;
+
             }
 
-            .user {
-                display: flex;
-                align-items: center;
-                gap: 10px;
 
-                img {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                }
-
-                span {
-                    font-size: 14px;
-                }
+            hr {
+                margin: 20px 0px;
+                border: none;
+                height: 0.5px;
+                background-color: lightgray;
             }
 
-            .item {
+            .menu {
                 display: flex;
-                align-items: center;
-                gap: 10px;
+                flex-direction: column;
+                cursor: pointer;
 
-                img {
-                    width: 30px;
-                }
 
                 span {
-                    font-size: 14px;
+                    font-size: 12px;
                 }
+
+                .user {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+
+                    img {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px;
+
+
+                    &:hover {
+                        background-color: rgb(228, 230, 233);
+                        border-radius: 10px;
+                        transition: 0.2s;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 600;
+
+                    }
+
+                    img {
+                        border-radius: 20px;
+                        width: 36px;
+                        height: 36px;
+
+                    }
+                }
+
+                .item-friends {
+                    background-image: url(../../assests/allone.png);
+                    background-position: 0 -266px;
+                    background-size: 38px 532px;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    border: 0;
+
+                }
+
+                .item-groups {
+                    background-image: url(../../assests/allone.png);
+                    background-position: 0 -76px;
+                    background-size: 38px 532px;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    border: 0;
+
+                }
+
+                .item-marketplace {
+                    background-image: url(../../assests/allone.png);
+                    background-position: 0 -380px;
+                    background-size: 38px 532px;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    border: 0;
+
+                }
+
+                .item-watch {
+                    background-image: url(../../assests/allone.png);
+                    background-position: 0 -494px;
+                    background-size: 38px 532px;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    border: 0;
+
+                }
+
+                .item-watch {
+                    background-image: url(../../assests/allone.png);
+                    background-position: 0 -494px;
+                    background-size: 38px 532px;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    border: 0;
+
+                }
+
+                .item-memories {
+                    background-image: url(../../assests/allone.png);
+                    background-position: 0 -152px;
+                    background-size: 38px 532px;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    border: 0;
+
+                }
+
+                .arrow {
+                    background-color: rgb(228, 230, 233);
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 20px;
+                }
+
             }
         }
     }

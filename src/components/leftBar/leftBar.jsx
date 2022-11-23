@@ -1,80 +1,129 @@
-import React from 'react'
+import { useState } from "react"
 import './leftBar.scss'
-
-import {
-    Friends, Groups, Market, Watch, Memories, Events,
-    Gaming, Gallery, Videos, Messages, Tutorials, Courses, Fund
-} from '../../assests';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const LeftBar = () => {
+
+    const [seeMore, setSeeMore] = useState(false)
+
+    const switchSee = (e) => {
+        e.preventDefault();
+        setSeeMore((prevseeMore) => !prevseeMore);
+    }
     return (
         <div className="leftBar">
             <div className="container">
                 <div className="menu">
-                    <div className="user">
-                        <img src='https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/dc/dc3593940847428ac6f4d839c6e7687af4185649.jpg' alt='avatar' />
-                        <span>Mark Neiman</span>
-                    </div>
-                    <div className="item">
-                        <img src={Friends} alt="" />
-                        <span>Friends</span>
-                    </div>
-                    <div className="item">
-                        <img src={Groups} alt="" />
-                        <span>Groups</span>
-                    </div>
-                    <div className="item">
-                        <img src={Market} alt="" />
-                        <span>Marketplace</span>
-                    </div>
-                    <div className="item">
-                        <img src={Watch} alt="" />
-                        <span>Watch</span>
-                    </div>
-                    <div className="item">
-                        <img src={Memories} alt="" />
-                        <span>Memories</span>
-                    </div>
+                    <a href="/profile/:id">
+                        <div className="item">
+                            <img src='https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/dc/dc3593940847428ac6f4d839c6e7687af4185649.jpg' alt='avatar' />
+                            <span>Mark Neiman</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-friends" />
+                            <span>Friends</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-groups" />
+                            <span>Groups</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-marketplace" />
+                            <span>Marketplace</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-watch" />
+                            <span>Watch</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-memories" />
+                            <span>Memories</span>
+                        </div>
+                    </a>
+                </div>
+                <div className="menu">
+                    {!seeMore &&
+                        <div className="item" onClick={switchSee}>
+                            <KeyboardArrowDownIcon className='arrow' />
+                            <span>See more</span>
+                        </div>}
+                    {seeMore &&
+                        <a href='#'>
+                            <div className="item">
+                                <div className="item-friends" />
+                                <span>Friends</span>
+                            </div>
+                        </a>}
+                    {seeMore &&
+                        <a href='#'>
+                            <div className="item">
+                                <div className="item-groups" />
+                                <span>Groups</span>
+                            </div>
+                        </a>}
+                    {seeMore &&
+                        <a href='#'>
+                            <div className="item">
+                                <div className="item-marketplace" />
+                                <span>Marketplace</span>
+                            </div>
+                        </a>}
+                    {seeMore &&
+                        <a href='#'>
+                            <div className="item">
+                                <div className="item-watch" />
+                                <span>Watch</span>
+                            </div>
+                        </a>}
+                    {seeMore &&
+                        <div className="item" onClick={switchSee}>
+                            <KeyboardArrowUpIcon className='arrow' />
+                            <span>See less</span>
+                        </div>}
                 </div>
                 <hr />
                 <div className="menu">
-                    <span>Your shortcuts</span>
-                    <div className="item">
-                        <img src={Events} alt="" />
-                        <span>Events</span>
-                    </div>
-                    <div className="item">
-                        <img src={Gaming} alt="" />
-                        <span>Gaming</span>
-                    </div>
-                    <div className="item">
-                        <img src={Gallery} alt="" />
-                        <span>Gallery</span>
-                    </div>
-                    <div className="item">
-                        <img src={Videos} alt="" />
-                        <span>Videos</span>
-                    </div>
-                    <div className="item">
-                        <img src={Messages} alt="" />
-                        <span>Messages</span>
-                    </div>
-                </div>
-                <hr />
-                <div className="menu">
-                    <span>Others</span>
-                    <div className="item">
-                        <img src={Fund} alt="" />
-                        <span>Fundraiser</span>
-                    </div>
-                    <div className="item">
-                        <img src={Tutorials} alt="" />
-                        <span>Tutorials</span>
-                    </div>
-                    <div className="item">
-                        <img src={Courses} alt="" />
-                        <span>Courses</span>
-                    </div>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-friends" />
+                            <span>Friends</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-groups" />
+                            <span>Groups</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-marketplace" />
+                            <span>Marketplace</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-watch" />
+                            <span>Watch</span>
+                        </div>
+                    </a>
+                    <a href='#'>
+                        <div className="item">
+                            <div className="item-memories" />
+                            <span>Memories</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

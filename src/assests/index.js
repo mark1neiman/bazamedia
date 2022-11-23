@@ -15,3 +15,5 @@ export { default as Tutorials } from './11.png'
 export { default as Courses } from './12.png'
 
 export { default as Fund } from './13.png'
+
+export { default as allone } from './allone.png'
