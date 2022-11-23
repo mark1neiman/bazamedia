@@ -1,7 +1,9 @@
 import { createBrowserRouter, Outlet, RouterProvider, Navigate } from 'react-router-dom'
 import { Home, Login, Profile } from './pages/index'
 import { NavBar, LeftBar, RightBar } from './components/index';
-
+import "./style.scss"
+import { useContext } from 'react';
+import { DarkModeContext } from "./context/darkMode";
 
 
 const App = () => {
@@ -17,11 +19,11 @@ const App = () => {
         return children;
     }
 
-
+    const { darkMode } = useContext(DarkModeContext);
 
     const Layout = () => {
         return (
-            <>
+            <div className={`theme-${darkMode ? "dark" : "light"}`}>
                 <NavBar />
                 <div style={{ display: "flex" }}>
                     <LeftBar />
@@ -30,7 +32,7 @@ const App = () => {
                     </div>
                     <RightBar />
                 </div>
-            </>
+            </div>
         )
     }
 
