@@ -1,0 +1,131 @@
+$xs: 0;
+$sm: 480px;
+$md: 720px;
+$lg: 960px;
+$xl: 1200px;
+
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        display: flex;
+        background-color: white;
+        width: 50%;
+        border-radius: 10px;
+        min-height: 600px;
+        background-size: cover;
+        background-color: rgb(240, 240, 240);
+
+        @media screen and (max-width: $sm) {
+            flex-direction: column;
+            width: auto;
+        }
+
+        .card-left {
+            flex: 1;
+            background: linear-gradient(rgb(39, 11, 96, 0.5), rgb(39, 11, 96, 0.5)), url("https://img.freepik.com/free-vector/social-media-network_74855-4575.jpg?w=1800&t=st=1668966636~exp=1668967236~hmac=cb97eb25813eca5823ea4cd89f89e7b4c7ea0c0cc32388cbb2cac7869979502a") center;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+            border-radius: 10px 0 0 10px;
+            background-size: cover;
+
+            @media screen and (max-width: $sm) {
+
+                padding: 5px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            h1 {
+                font-size: 100px;
+                line-height: 100px;
+                text-align: center;
+                text-transform: uppercase;
+
+                @media screen and (max-width: $sm) {
+                    font-size: 40px;
+                    text-align: center;
+                    padding: 10px;
+                    margin: auto;
+                }
+            }
+
+
+            span {
+                padding-top: 30px;
+                font-size: 14px;
+            }
+
+        }
+
+        .card-right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+
+            @media screen and (max-width: $sm) {
+                text-align: center;
+            }
+
+            h1 {
+                color: #555;
+
+                @media screen and (max-width: $sm) {
+                    font-size: 30px;
+                    text-align: center;
+                    padding: 1px;
+
+
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+                    background-color: rgb(240, 240, 240);
+
+                    @media screen and (max-width: $sm) {
+                        text-align: center;
+
+                    }
+                }
+            }
+
+            span {
+                cursor: pointer;
+                color: #938eef;
+            }
+
+            button {
+                width: 50%;
+                padding: 10px;
+                border: none;
+                background-color: #938eef;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 10px;
+
+                @media screen and (max-width: $sm) {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
